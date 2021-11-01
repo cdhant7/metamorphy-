@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    background-color: black;
+
+}
+h1{
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: 48px;
+}
+#grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    /* grid-template-columns: 150px 150px 150px 150px 150px; */
+    grid-gap: 16px;
+    /* row-gap: 32px;
+    column-gap: 48px; */
+    /* justify-content: space-around; */
+}
+.movie-poster{
+width: 100%;
+max-width: 400px;
+box-sizing: border-box;
+}
+.movie-poster:hover{
+    animation: zoom 2s forwards;
+}
+@keyframes zoom{
+    0%{
+        transform: scale(1);
+        box-shadow: 0 2px 5px #ccc;
+    }
+    100%{
+        transform: scale(1.1);
+    }
+}
+
+@media(max-width:900px){
+    #grid-container{
+        grid-template-columns: auto auto auto ;
+    }
+
+}
+
+@media(max-width:400px){
+    #grid-container{
+        grid-template-columns: auto auto;
+    }
+
+}
